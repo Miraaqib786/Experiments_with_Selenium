@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Welcome to Greet Me App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-color: #f0f0f0;
+        color: #333;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 50px;
+      }
+      input[type="text"] {
+        padding: 10px;
+        width: 250px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+      button {
+        padding: 10px 20px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      button:hover {
+        background-color: #218838;
+      }
+      p#greeting {
+        font-size: 20px;
+        margin-top: 20px;
+        font-weight: bold;
+      }
+      footer {
+        margin-top: 40px;
+        font-size: 14px;
+        color: #555;
+      }
+      footer a {
+        color: #007bff;
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+    <script>
+      function greetUser() {
+        const name = document.getElementById("username").value.trim();
+        const greeting = document.getElementById("greeting");
+        if (name === "") {
+          greeting.innerHTML = "Please enter your name.";
+          greeting.style.color = "red";
+        } else {
+          greeting.innerHTML = `Hello, ${name}!`;
+          greeting.style.color = "green";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Greeting App</h1>
+    <input type="text" id="username" placeholder="Enter your name here" />
+    <br /><br />
+    <button onclick="greetUser()">Greet</button>
+    <p id="greeting"></p>
+    <footer>
+      <p>Made with ❤️ by AR_Mir</p>
+      <p>GNI India</p>
+      <p>
+        Contact:
+        <a href="mailto:aaqib.csds@gniindia.org">aaqib.csds@gniindia.org</a>
+      </p>
+      <p>
+        This is a simple Greeting App which we will use for containerization and
+        Selenium Automation.
+      </p>
+      <p>
+        It greets the user by name and is built with HTML, CSS, and JavaScript.
+      </p>
+      <p><b>Happy Coding!</b></p>
+    </footer>
+  </body>
+</html>
